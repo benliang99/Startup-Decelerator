@@ -2,6 +2,7 @@
 let companies = [];
 let currentCompany = null;
 let score = 0;
+let firstCompany = true;
 
 // Function to read and parse the CSV file
 function readCSVFile(file) {
@@ -35,7 +36,7 @@ function nextCompany() {
     currentCompany = companies.shift();
 
     document.getElementById('description').innerText = currentCompany.description;
-    document.getElementById('result').innerText = '';
+    //document.getElementById('result').innerText = '';
     document.getElementById('real').disabled = false;
     document.getElementById('fake').disabled = false;
 }
@@ -47,7 +48,12 @@ function checkAnswer(isReal) {
 
     if (isCorrect) {
         score++;
-        document.getElementById('result').innerText = `Correct! ${currentCompany.name} ${currentCompany.isReal === 'True' ? `raised ${currentCompany.funding_amount} from investors.` : 'is a fake company.'}`;
+        if(!firstCompany){
+            document.getElementById('result').innerText = `Correct! ${currentCompany.name} ${currentCompany.isReal === 'True' ? `raised ${currentCompany.funding_amount} from investors.` : 'is a fake company.'}`;
+        }
+        else{
+            firstCompany = false;
+        }   
     } else {
         document.getElementById('result').innerText = `Wrong! ${currentCompany.name} ${currentCompany.isReal === 'True' ? `raised ${currentCompany.funding_amount} from investors.` : 'is a fake company.'}`;
     }
@@ -62,9 +68,6 @@ function checkAnswer(isReal) {
         nextCompany(); // Proceed to the next company
     }
 }
-
-
-
 
 // Event listeners for interactions
 document.getElementById('csvUpload').addEventListener('change', event => {
