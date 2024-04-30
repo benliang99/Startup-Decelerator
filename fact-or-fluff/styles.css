@@ -8,12 +8,12 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -28,12 +28,13 @@ h1 {
 }
 
 .description-box {
-    font-size: 1.2em;
-    margin: 20px 0;
+    width: 120%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the description box */
     padding: 20px;
     background-color: #f7f9fc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
 }
 
 .button-group {
