@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Hot or Not</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;500&display=swap">
 </head>
 <body>
-    <h1>AI Hot or Not</h1>
+    <div class="container">
+        <h1>AI Hot or Not</h1>
 
-    <input type="file" id="csvUpload" accept=".csv" />
-    <p>Upload a .csv file containing company information.</p>
+        <div class="upload-section">
+            <label for="csvUpload">Upload a .csv file containing company information:</label>
+            <input type="file" id="csvUpload" accept=".csv" />
+        </div>
 
-    <div id="description"></div>
+        <div class="game-section">
+            <div id="description" class="description-box"></div>
 
-    <button id="real" disabled>Real</button>
-    <button id="fake" disabled>Fake</button>
+            <div class="button-group">
+                <button id="real" disabled>Real</button>
+                <button id="fake" disabled>Fake</button>
+            </div>
 
-    <div id="result"></div>
-    <div id="score">Score: 0</div>
+            <div id="result"></div>
+        </div>
+
+        <div class="score-section">
+            <div id="score">Score: 0</div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
