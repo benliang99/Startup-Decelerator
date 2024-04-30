@@ -2,10 +2,15 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f4f8;
+    background-image: url('whiteboard.jpg'); 
+    background-size: 80%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     color: #333;
     margin: 0;
     padding: 0;
 }
+
 
 .container {
     max-width: 1000px;
